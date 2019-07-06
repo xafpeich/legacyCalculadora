@@ -1,0 +1,7 @@
+organization=xafpeich-github
+projectKey=xafpeich_legacyCalculadora
+serverUrl=https://sonarcloud.io
+serverVersion=8.0.0.27038
+dashboardUrl=https://sonarcloud.io/dashboard?id=xafpeich_legacyCalculadora
+ceTaskId=AWvGPYkU3fcwK7ifjyx7
+ceTaskUrl=https://sonarcloud.io/api/ce/task?id=AWvGPYkU3fcwK7ifjyx7
