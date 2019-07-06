@@ -21,6 +21,10 @@ public class Calculator {
             addWrite = true;    // Racordé des Nombres dans l'Affichage
     double val = 0; // Storage Values For Calcule
     boolean bool = false;
+    
+    String COMIC_SANS = new String("Comic Sans MS");
+    
+    
     /*
         Mx Calculator: 
         X = Ligne
@@ -62,7 +66,7 @@ public class Calculator {
         window.setSize(410,600); // Height And Width Of Window
         window.setLocationRelativeTo(null); // Move Window To Center
         
-        Font btnFont = new Font("Comic Sans MS", Font.PLAIN, 28);
+        Font btnFont = new Font(COMIC_SANS, Font.PLAIN, 28);
         
         choixColor = new JButton();
         choixColor.setBounds(330, 30, 38, 18);
@@ -85,7 +89,7 @@ public class Calculator {
         
         inText = new JTextField("0");
         inText.setBounds(x[0],y[0],350,70);
-        inText.setFont(new Font("Comic Sans MS", Font.PLAIN, 33));
+        inText.setFont(new Font(COMIC_SANS, Font.PLAIN, 33));
         inText.setEnabled(true);
         window.add(inText);
         
@@ -115,8 +119,7 @@ public class Calculator {
                     str2 += str.charAt(i);
                 }
                 
-                if(str2 == null){
-                //if(str2 != null && str2.equalsIgnoreCase("")) {
+                if(str2 != null && str2.equalsIgnoreCase("")) {
                     inText.setText("0");
                 } else {
                     inText.setText(str2);
@@ -434,7 +437,7 @@ public class Calculator {
         
         btnPoint = new JButton(".");
         btnPoint.setBounds(x[0],y[5],wBtn,hBtn);
-        btnPoint.setFont(new Font("Comic Sans MS", Font.BOLD, 32));
+        btnPoint.setFont(new Font(COMIC_SANS, Font.BOLD, 32));
         btnPoint.setCursor(new Cursor(Cursor.HAND_CURSOR));
         btnPoint.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
