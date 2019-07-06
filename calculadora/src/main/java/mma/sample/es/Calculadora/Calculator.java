@@ -107,13 +107,16 @@ public class Calculator {
         btnBack.setFont(btnFont);
         btnBack.setCursor(new Cursor(Cursor.HAND_CURSOR));
         btnBack.addActionListener(new ActionListener() {
+        	
             public void actionPerformed(ActionEvent e) {
                 String str = inText.getText();
                 String str2 = "";
                 for(int i = 0; i < (str.length() - 1); i++) {
                     str2 += str.charAt(i);
                 }
-                if(str2 == "") {
+                
+                if(str2 == null){
+                //if(str2 != null && str2.equalsIgnoreCase("")) {
                     inText.setText("0");
                 } else {
                     inText.setText(str2);
@@ -127,7 +130,8 @@ public class Calculator {
         btnMod.setFont(btnFont);
         btnMod.setCursor(new Cursor(Cursor.HAND_CURSOR));
         btnMod.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
+  
+    public void actionPerformed(ActionEvent e) {
                 if (Pattern.matches("([-]?\\d+[.]\\d*)|(\\d+)", inText.getText()))
                     if (go) {
                         val = calc(val, inText.getText(),opt);
